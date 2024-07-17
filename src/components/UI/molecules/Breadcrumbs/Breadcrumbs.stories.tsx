@@ -1,10 +1,11 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import Breadcrumbs from "./Breadcrumbs";
+import type { Meta, StoryObj } from '@storybook/react';
+
+import Breadcrumbs from './Breadcrumbs';
 
 const meta: Meta<typeof Breadcrumbs> = {
-  title: "Molecules/Breadcrumbs",
+  title: 'Molecules/Breadcrumbs',
   component: Breadcrumbs,
-  parameters: { actions: { argTypesRegex: "^on.*" } },
+  parameters: { actions: { argTypesRegex: '^on.*' } },
 };
 
 export default meta;

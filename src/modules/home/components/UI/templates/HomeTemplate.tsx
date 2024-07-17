@@ -1,20 +1,20 @@
 import React from 'react';
-import HeroSection from '../organisms/HeroSection';
-import Button from '@components/components/UI/atoms/Button/Button';
+
+import HeroSection from '../organisms/HeroSection/HeroSection';
+import SocialMediaSection from '../organisms/SocialMediaSection/SocialMediaSection';
 
 interface Props {
   dynamicTitle: string;
+  showInstagram?: boolean;
 }
 
-const HomeTemplate = ({ dynamicTitle }: Props) => {
+const HomeTemplate = ({ dynamicTitle, showInstagram }: Props) => {
   return (
     <div>
-      <h2>{dynamicTitle}</h2>
+      <h2 className="text-2xl mb-4">{dynamicTitle}</h2>
       <HeroSection />
-      <div className="w-full flex">
-        <Button variant="contained" color="secondary">
-          Guardar
-        </Button>
+      <div className="mt-4">
+        <SocialMediaSection showInstagram={showInstagram} />
       </div>
     </div>
   );

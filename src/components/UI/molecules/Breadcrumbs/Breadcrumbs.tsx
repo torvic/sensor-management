@@ -1,6 +1,8 @@
-import React from "react";
-import P from "../../atoms/P/P";
-import Image from "next/image";
+import React from 'react';
+
+import Image from 'next/image';
+
+import P from '../../atoms/P/P';
 
 interface IBreadcrumbs {
   children?: React.ReactNode;
@@ -8,12 +10,12 @@ interface IBreadcrumbs {
   onClick?: () => void;
 }
 
-const Breadcrumbs = ({ className, ...props }: IBreadcrumbs) => {
+const Breadcrumbs = ({ ...props }: IBreadcrumbs) => {
   return (
     <div className="flex gap-2 items-center text-[#5A5A5F]">
       <button type="button" {...props}>
         <P variant="s" strong>
-          Breadcrumbs 1{" "}
+          Breadcrumbs 1{' '}
         </P>
       </button>
       <Image
