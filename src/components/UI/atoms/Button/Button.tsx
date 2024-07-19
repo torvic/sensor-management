@@ -1,5 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
+
+import cn from 'classnames';
 
 interface ButtonProps {
   children?: React.ReactNode;
@@ -8,12 +9,13 @@ interface ButtonProps {
   className?: string;
 }
 
-const Button = ({ children, className }: ButtonProps) => {
+const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
     <button
-      className={classNames(
+      {...props}
+      className={cn(
+        'font-poppins bg-primary text-white rounded-[4px] px-[20px] py-[14px]',
         className,
-        'bg-primary text-white rounded-[4px] px-[20px] py-[14px]',
       )}
     >
       {children}
